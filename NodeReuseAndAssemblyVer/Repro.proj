@@ -1,0 +1,18 @@
+<Project>
+    <UsingTask TaskName="MyTask" AssemblyFile="bin\$(Version)\netstandard2.0\MyTask.dll" />
+
+    <ItemGroup>
+        <Project Include="repro.proj" Properties="A=1" />
+        <Project Include="repro.proj" Properties="A=2" />
+    </ItemGroup>
+    
+
+    <Target Name="Build">
+        <MSBuild Projects="@(Project)" Targets="Dummy" BuildInParallel="true" />
+    </Target>
+
+    <Target Name="Dummy">
+        <Message Importance="High" Text="$(A)" />
+        <MyTask />
+    </Target>
+</Project>
