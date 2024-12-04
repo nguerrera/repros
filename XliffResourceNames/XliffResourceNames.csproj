@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Import Project="..\OutsideXliffResourceNames\Test.projitems" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.XliffTasks" Version="10.0.0-beta.24604.2" />
+  </ItemGroup>
+</Project>

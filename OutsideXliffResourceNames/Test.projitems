@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <HasSharedItems>true</HasSharedItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Test.resx" />
+  </ItemGroup>
+</Project>
